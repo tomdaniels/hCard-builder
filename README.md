@@ -8,20 +8,15 @@ Ready for deployment with a small express server `server/server`.
     git clone https://github.com/tomdaniels/hCard-builder.git && cd hCard-builder && yarn install && yarn watch
 ```
 
-Don't forget to point your browser to `localhost:8080`
+Don't forget to point your browser to [localhost:8080](localhost:8080)
 
 **Alternatively:**
-build the public files: 
+Kick off the node server (after the repo is cloned and installed):
 ```bash
-    yarn build:dev
+    yarn build:dev && yarn start
 ```
 
-and boot up the node server
-```bash
-    yarn start
-```
-
-This is point to `localhost:3000`
+this will point to [localhost:3000](localhost:3000)
 
 ### Under the hood?
 
