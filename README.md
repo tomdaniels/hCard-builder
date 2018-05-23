@@ -8,6 +8,8 @@ Ready for deployment with a small express server `server/server`.
     git clone https://github.com/tomdaniels/hCard-builder.git && cd hCard-builder && yarn install && yarn watch
 ```
 
+Don't forget to point your browser to `localhost:8080`
+
 
 ### Under the hood?
 
