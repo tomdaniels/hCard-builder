@@ -2,7 +2,7 @@
   "name": "hCard-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "",
+  "repository": "git@github.com:tomdaniels/hCard-builder.git",
   "author": "Tom Daniels",
   "license": "MIT",
   "scripts": {
