@@ -23,6 +23,8 @@ this will point to [localhost:3000](localhost:3000)
 I added a little mocha suite, only tested the form component and the preview component get rendered.
 This is mainly for demonstration purposes as I am quite familiar with testing, as it is the Domain way ;)
 
+`yarn test` will get it running. 
+
 ### Under the hood?
 
 - React.js 
