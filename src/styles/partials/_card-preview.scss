@@ -1,0 +1,65 @@
+.hCard-preview__container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: $background-grey;
+  position: relative;
+
+  @media (max-width: $breakpoint) {
+    width: 100%;
+  }
+}
+
+.hCard-preview__section-title {
+  color: $light-grey;
+  margin: 0;
+  text-align: right;
+}
+
+.hCard-preview__inner-wrap {
+  width: 80%;
+  margin: 180px auto;
+  @media (max-width: $breakpoint) {
+    width: 90%;
+    margin: 15px auto;
+  }
+}
+
+.hCard-preview__header {
+  height: 70px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hCard-preview__image {
+  height: 100px;
+  margin: 20px;
+  position: relative;
+}
+
+.hCard-preview__user-name {
+  color: $solid-white;
+  padding-top: 30px;
+  margin-left: 10px;
+}
+//
+.hCard-preview__field {
+  border-bottom: 2px dotted $light-grey;
+  color: $off-blue;
+  padding: 20px;
+}
+
+.hCard-preview__field.inline {
+  border-bottom: none;
+  padding-left: 150px;
+}
+
+.hCard-preview__value {
+  color: #000;
+}
+
+.hCard-preview__results {
+  background-color: $solid-white;
+}

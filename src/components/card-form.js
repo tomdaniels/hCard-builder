@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PersonalDetailsForm from './form/personal-details-form';
 import AddressForm from './form/address-form';
 import Button from './form/button';
@@ -35,6 +36,10 @@ const CardForm = ({ onInputChange }) => {
             </div>
         </div>
     );
-}
+};
+
+CardForm.propTypes = {
+  onInputChange: PropTypes.func.isRequired,
+};
 
 export default CardForm;

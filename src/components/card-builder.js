@@ -6,16 +6,17 @@ class CardBuilder extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      givenName: '',
-      surname: '',
-      email: '',
-      phone: '',
-      houseNameOrNumber: '',
-      street: '',
-      suburb: '',
-      state: '',
-      postcode: '',
-      country: '',
+        givenName: '',
+        surname: '',
+        email: '',
+        phone: '',
+        houseNameOrNumber: '',
+        street: '',
+        suburb: '',
+        state: '',
+        postcode: '',
+        country: '',
+        photo: '/images/staff-photo.png',
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -97,8 +98,10 @@ class CardBuilder extends React.Component {
                     houseNumber={this.state.houseNameOrNumber}
                     street={this.state.street}
                     suburb={this.state.suburb}
+                    state={this.state.state}
                     postcode={this.state.postcode}
                     country={this.state.country}
+                    photo={this.state.photo}
                 />
             </div>
         </div>

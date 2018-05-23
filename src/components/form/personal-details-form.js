@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Input from './input';
 
 const PersonalDetailsForm = ({ onInputChange }) => (
@@ -24,5 +25,9 @@ const PersonalDetailsForm = ({ onInputChange }) => (
         </div>
     </div>
 );
+
+PersonalDetailsForm.propTypes = {
+    onInputChange: PropTypes.func.isRequired,
+};
 
 export default PersonalDetailsForm;

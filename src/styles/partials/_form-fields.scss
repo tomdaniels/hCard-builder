@@ -4,6 +4,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 600px;
+
+  @media (max-width: $breakpoint) {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .hCard-builder__input-wrap {

@@ -1,34 +1,67 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const CardPreview = ({ givenName, surname, photo, email, phone, houseNumber, street, suburb, postcode, country }) => (
-  <div className="hCard-preview__preview-wrap">
-      <div className="hCard-preview__header">
-          <div className="hCard-preview__user-name">
-              {givenName} {surname}
-          </div>
-          <div>
-              <img src="/public/images/staff-photo.png" />
-          </div>
-      </div>
-    <div>
-        <div>
-            EMAIL <span>{email}</span>
+const CardPreview = ({
+    givenName,
+    surname,
+    photo,
+    email,
+    phone,
+    houseNumber,
+    street,
+    suburb,
+    state,
+    postcode,
+    country
+}) => (
+  <div className="hCard-preview__container">
+    <div className="hCard-preview__inner-wrap">
+        <h4 className="hCard-preview__section-title">hCard Preview</h4>
+        <div className="hCard-preview__header">
+            <div className="hCard-preview__user-name">
+                {givenName} {surname}
+            </div>
+            <div>
+                <img
+                    className="hCard-preview__image"
+                    src={photo}
+                    alt="hCard-staff"
+                />
+            </div>
         </div>
-        <div>
-            PHONE <span>{phone}</span>
-        </div>
-        <div>
-            ADDRESS <span>{houseNumber} {street} {suburb}</span>
-        </div>
-        <div>
-            POSTCODE <span>{postcode}</span>
-        </div>
-        <div>
-            COUNTRY <span>{country}</span>
+        <div className="hCard-preview__results">
+            <div className="hCard-preview__field">
+                EMAIL <span className="hCard-preview__value">{email}</span>
+            </div>
+            <div className="hCard-preview__field">
+                PHONE <span className="hCard-preview__value">{phone}</span>
+            </div>
+            <div className="hCard-preview__field">
+                ADDRESS <span className="hCard-preview__value">{houseNumber} {street} {suburb} {state}</span>
+            </div>
+            <div className="hCard-preview__field">
+                POSTCODE <span>{postcode}</span>
+                <span className="hCard-preview__field inline">COUNTRY</span>
+                <span className="hCard-preview__value">{country}</span>
+            </div>
         </div>
     </div>
   </div>
 );
+
+CardPreview.propTypes = {
+    givenName: PropTypes.string.isRequired,
+    surname: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    houseNumber: PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    suburb: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+    postcode: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+};
 
 
 export default CardPreview;
