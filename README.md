@@ -16,4 +16,4 @@ Ready for deployment with a small express server `server/server`.
 - Sass (scss)
 - Webpack and babel
 
-![](/docs/screenshot.png)
+![Screenshot](./docs/screenshot.png)
