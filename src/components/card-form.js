@@ -6,36 +6,37 @@ import Button from './form/button';
 
 const CardForm = ({ onInputChange, changeAvatar }) => {
 
-    const onCreateCardClick = () => {
-        alert('create card');
-    };
+  const onCreateCardClick = () => {
+      alert('create card');
+  };
 
-    return (
-        <div className="hCard-builder__form-wrap">
-            <h1>hCard Builder</h1>
-            <PersonalDetailsForm
-                onInputChange={onInputChange}
-            />
-            <AddressForm
-                onInputChange={onInputChange}
-            />
-            <div className="hCard-builder__button-wrap">
-                <Button
-                    text="Upload Avatar"
-                    onButtonClick={changeAvatar}
-                />
-                <Button
-                    text={"Create hCard"}
-                    onButtonClick={onCreateCardClick}
-                    isPrimary
-                />
-            </div>
-        </div>
-    );
+  return (
+    <div className="hCard-builder__form-wrap">
+      <h1>hCard Builder</h1>
+      <PersonalDetailsForm
+          onInputChange={onInputChange}
+      />
+      <AddressForm
+          onInputChange={onInputChange}
+      />
+      <div className="hCard-builder__button-wrap">
+          <Button
+              text="Upload Avatar"
+              onButtonClick={changeAvatar}
+          />
+          <Button
+              text={"Create hCard"}
+              onButtonClick={onCreateCardClick}
+              isPrimary
+          />
+      </div>
+    </div>
+  );
 };
 
 CardForm.propTypes = {
   onInputChange: PropTypes.func.isRequired,
+  changeAvatar: PropTypes.func.isRequired,
 };
 
 export default CardForm;
