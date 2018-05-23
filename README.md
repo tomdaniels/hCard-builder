@@ -18,12 +18,18 @@ Kick off the node server (after the repo is cloned and installed):
 
 this will point to [localhost:3000](localhost:3000)
 
+###Testing? 
+
+I added a little mocha suite, only tested the form component and the preview component get rendered.
+This is mainly for demonstration purposes as I am quite familiar with testing, as it is the Domain way ;)
+
 ### Under the hood?
 
 - React.js 
 - The aforemention dash of node
 - Sass (scss)
-- Webpack and babel
+- Mocha and Chai testing
+- Webpack and babel server/compiler
 - Babel-polyfill is also set up to handle the older browsers. 
 
 ![Screenshot](./docs/screenshot.png)
