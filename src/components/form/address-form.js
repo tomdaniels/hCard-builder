@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Input from './input';
 
 const AddressForm = ({ onInputChange }) => (
@@ -32,5 +33,9 @@ const AddressForm = ({ onInputChange }) => (
         </div>
     </div>
 );
+
+AddressForm.propTypes = {
+    onInputChange: PropTypes.func.isRequired,
+};
 
 export default AddressForm;
