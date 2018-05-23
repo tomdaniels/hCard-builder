@@ -18,14 +18,14 @@ beforeEach(() => {
 
 describe('<CardBuilder/>', function () {
     it('should render the page', () => {
-        chai.expect(wrapper.find('.hCard-builder__content-container'));
+        chai.expect(wrapper.find('.hCard-builder__content-container')).to.have.length(1);
     });
 
     it('should render the form that creates the hCard', () => {
-        chai.expect(wrapper.find('CardForm'));
+        chai.expect(wrapper.find('CardForm')).to.have.length(1);
     });
 
     it('should render a preview as the user updates the form', () => {
-        chai.expect(wrapper.find('CardPreview'));
+        chai.expect(wrapper.find('CardPreview')).to.have.length(1);
     });
 });
