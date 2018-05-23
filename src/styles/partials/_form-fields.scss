@@ -1,0 +1,15 @@
+.hCard-builder__form-fields {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.hCard-builder__input-wrap {
+  margin: 15px;
+}
+
+.hCard-builder__input-field {
+  padding: 10px 30px;
+}

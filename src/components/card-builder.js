@@ -1,6 +1,5 @@
 import React from 'react';
-import CardPreview from './card-preview';
-// import staffPhoto from './../../assets/images/staff-photo';
+import Input from './form/input';
 
 class CardBuilder extends React.Component {
   constructor(props) {
@@ -16,28 +15,132 @@ class CardBuilder extends React.Component {
       state: '',
       postcode: '',
       country: '',
-      photo: undefined,
+      fullAddress: '',
     };
+
     this.formatAddress = this.formatAddress.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
   }
 
-  formatAddress = () => `${this.state.houseNameOrNumber} ${this.state.street}, ${this.state.suburb}`;
+  onInputChange = (event) => {
+    const input = event.target.value;
+    const field = event.target.id;
+
+    switch(field) {
+      case 'GIVEN NAME':
+      this.setState(() => ({
+        giveName: input,
+      }));
+      break;
+      case 'SURNAME':
+      this.setState(() => ({
+        surname: input,
+      }));
+      break;
+      case 'EMAIL':
+      this.setState(() => ({
+        email: input,
+      }));
+      break;
+      case 'PHONE':
+      this.setState(() => ({
+        phone: input,
+      }));
+      break;
+      case 'HOUSE NUMBER':
+      this.setState(() => ({
+        houseNameOrNumber: input,
+      }));
+      break;
+      case 'STREET':
+      this.setState(() => ({
+        street: input,
+      }));
+      break;
+      case 'SUBURB':
+      this.setState(() => ({
+        suburb: input,
+      }));
+      break;
+      case 'STATE':
+      this.setState(() => ({
+        state: input,
+      }));
+      break;
+      case 'POSTCODE':
+      this.setState(() => ({
+        postcode: input,
+      }));
+      break;
+      case 'COUNTRY':
+      this.setState(() => ({
+        country: input,
+      }));
+      break;
+      default:
+      return null;
+    }
+  };
+
+  formatAddress = () => {
+      this.setState(() => ({
+          fullAddress: `${this.state.houseNameOrNumber} ${this.state.street}, ${this.state.suburb}`,
+      }));
+  };
 
   render() {
     return (
         <div className="hCard-builder__content-container">
             <h1>hCard Builder</h1>
-            <h6 className="hCard-builder__subheading">PERSONAL DETAILS</h6>
             <div className="hCard-builder__form-wrap">
-                <CardPreview
-                  email={this.state.email}
-                  phone={this.state.phone}
-                  address={this.formatAddress}
-                  postcode={this.state.postcode}
-                  country={this.state.country}
-                />
+                <h6 className="hCard-builder__section-subheading">PERSONAL DETAILS</h6>
+                <div className="hCard-builder__form-fields">
+                  <Input
+                    label="GIVEN NAME"
+                    onInputChange={this.onInputChange}
+                  />
+                  <Input
+                    label="SURNAME"
+                    onInputChange={this.onInputChange}
+                  />
+                  <Input
+                    label="EMAIL"
+                    onInputChange={this.onInputChange}
+                  />
+                  <Input
+                    label="PHONE"
+                    onInputChange={this.onInputChange}
+                  />
+                </div>
+                <h6 className="hCard-builder__section-subheading">ADDRESS</h6>
+                <div className="hCard-builder__form-fields">
+                  <Input
+                    label="HOUSE NUMBER"
+                    onInputChange={this.onInputChange}
+                  />
+                  <Input
+                    label="STREET"
+                    onInputChange={this.onInputChange}
+                  />
+                  <Input
+                    label="SUBURB"
+                    onInputChange={this.onInputChange}
+                  />
+                  <Input
+                    label="STATE"
+                    onInputChange={this.onInputChange}
+                  />
+                  <Input
+                    label="POSTCODE"
+                    onInputChange={this.onInputChange}
+                  />
+                  <Input
+                    label="COUNTRY"
+                    onInputChange={this.onInputChange}
+                  />
+                </div>
             </div>
-        </div>
+      </div>
     )
   }
 }
