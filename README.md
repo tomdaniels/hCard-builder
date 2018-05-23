@@ -10,6 +10,18 @@ Ready for deployment with a small express server `server/server`.
 
 Don't forget to point your browser to `localhost:8080`
 
+**Alternatively:**
+build the public files: 
+```bash
+    yarn build:dev
+```
+
+and boot up the node server
+```bash
+    yarn start
+```
+
+This is point to `localhost:3000`
 
 ### Under the hood?
 
