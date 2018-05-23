@@ -14,8 +14,8 @@ const Input = ({ label, onInputChange }) => (
 );
 
 Input.propTypes = {
-    label: PropTypes.string.isRequired,
-    onInputChange: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
 };
 
 export default Input;

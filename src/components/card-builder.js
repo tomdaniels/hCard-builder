@@ -23,10 +23,10 @@ class CardBuilder extends React.Component {
     this.handleAvatarUpload = this.handleAvatarUpload.bind(this);
   };
 
-    handleAvatarUpload = (event) => {
-        const uploadButton = document.getElementById('upload-avatar');
-        uploadButton.click();
-    };
+  handleAvatarUpload = (event) => {
+      const uploadButton = document.getElementById('upload-avatar');
+      uploadButton.click();
+  };
 
   onInputChange = (event) => {
     const input = event.target.value;
@@ -90,27 +90,27 @@ class CardBuilder extends React.Component {
 
   render() {
     return (
-        <div className="hCard-builder__content-container">
-            <div className="hCard-builder__form-and-display">
-                <CardForm
-                    onInputChange={this.onInputChange}
-                    changeAvatar={this.handleAvatarUpload}
-                />
-                <CardPreview
-                    givenName={this.state.givenName}
-                    surname={this.state.surname}
-                    email={this.state.email}
-                    phone={this.state.phone}
-                    houseNumber={this.state.houseNameOrNumber}
-                    street={this.state.street}
-                    suburb={this.state.suburb}
-                    state={this.state.state}
-                    postcode={this.state.postcode}
-                    country={this.state.country}
-                    photo={this.state.photo}
-                />
-            </div>
+      <div className="hCard-builder__content-container">
+        <div className="hCard-builder__form-and-display">
+          <CardForm
+              onInputChange={this.onInputChange}
+              changeAvatar={this.handleAvatarUpload}
+          />
+          <CardPreview
+              givenName={this.state.givenName}
+              surname={this.state.surname}
+              email={this.state.email}
+              phone={this.state.phone}
+              houseNumber={this.state.houseNameOrNumber}
+              street={this.state.street}
+              suburb={this.state.suburb}
+              state={this.state.state}
+              postcode={this.state.postcode}
+              country={this.state.country}
+              photo={this.state.photo}
+          />
         </div>
+      </div>
     )
   }
 }
