@@ -1,0 +1,19 @@
+.hCard-builder__button-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hCard-builder__button.primary {
+  background-color: $light-blue;
+  color: $solid-white;
+  padding: 10px 30px;
+  border-radius: 2px;
+}
+
+.hCard-builder__button {
+  background-color: $off-blue;
+  color: $solid-white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 2px;
+}
