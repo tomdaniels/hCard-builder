@@ -86,7 +86,6 @@ class CardBuilder extends React.Component {
       default:
       return null;
     }
-    console.log(field);
   };
 
   render() {
