@@ -33,5 +33,3 @@ This is mainly for demonstration purposes as I am quite familiar with testing, a
 - Mocha and Chai testing
 - Webpack and babel server/compiler
 - Babel-polyfill is also set up to handle the older browsers. 
-
-![Screenshot](./docs/screenshot.png)
