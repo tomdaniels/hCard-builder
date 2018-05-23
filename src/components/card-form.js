@@ -4,6 +4,7 @@ import AddressForm from './form/address-form';
 
 const CardForm = ({ onInputChange }) => (
     <div className="hCard-builder__form-wrap">
+        <h1>hCard Builder</h1>
         <PersonalDetailsForm
             onInputChange={onInputChange}
         />

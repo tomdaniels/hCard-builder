@@ -85,7 +85,6 @@ class CardBuilder extends React.Component {
   render() {
     return (
         <div className="hCard-builder__content-container">
-            <h1>hCard Builder</h1>
             <div className="hCard-builder__form-and-display">
                 <CardForm
                     onInputChange={this.onInputChange}
