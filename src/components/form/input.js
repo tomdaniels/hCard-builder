@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Input = ({ label, onInputChange }) => (
   <div className="hCard-builder__input-wrap">
@@ -11,5 +12,10 @@ const Input = ({ label, onInputChange }) => (
     />
   </div>
 );
+
+Input.propTypes = {
+    label: PropTypes.string.isRequired,
+    onInputChange: PropTypes.func.isRequired,
+};
 
 export default Input;
