@@ -4,6 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 600px;
+  margin: 0 auto;
 
   @media (max-width: $breakpoint) {
     width: 80%;
