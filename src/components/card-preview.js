@@ -1,11 +1,15 @@
 import React from 'react';
 
-const CardPreview = ({ name, surname, photo, email, phone, number, street, suburb, postcode, country }) => (
-  <div>
-      <div>
-          {`${name} ${surname}`}
+const CardPreview = ({ givenName, surname, photo, email, phone, houseNumber, street, suburb, postcode, country }) => (
+  <div className="hCard-preview__preview-wrap">
+      <div className="hCard-preview__header">
+          <div className="hCard-preview__user-name">
+              {givenName} {surname}
+          </div>
+          <div>
+              <img src="/public/images/staff-photo.png" />
+          </div>
       </div>
-      <img src="/public/images/staff-photo.png" />
     <div>
         <div>
             EMAIL <span>{email}</span>
@@ -14,7 +18,7 @@ const CardPreview = ({ name, surname, photo, email, phone, number, street, subur
             PHONE <span>{phone}</span>
         </div>
         <div>
-            ADDRESS <span>{`${number} ${street} ${suburb}`}</span>
+            ADDRESS <span>{houseNumber} {street} {suburb}</span>
         </div>
         <div>
             POSTCODE <span>{postcode}</span>

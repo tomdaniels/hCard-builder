@@ -28,7 +28,7 @@ class CardBuilder extends React.Component {
     switch(field) {
       case 'GIVEN NAME':
       this.setState(() => ({
-        giveName: input,
+        givenName: input,
       }));
       break;
       case 'SURNAME':
@@ -79,17 +79,19 @@ class CardBuilder extends React.Component {
       default:
       return null;
     }
+    console.log(field);
   };
 
   render() {
     return (
         <div className="hCard-builder__content-container">
             <h1>hCard Builder</h1>
+            <div className="hCard-builder__form-and-display">
                 <CardForm
                     onInputChange={this.onInputChange}
                 />
                 <CardPreview
-                    name={this.state.givenName}
+                    givenName={this.state.givenName}
                     surname={this.state.surname}
                     email={this.state.email}
                     phone={this.state.phone}
@@ -99,6 +101,7 @@ class CardBuilder extends React.Component {
                     postcode={this.state.postcode}
                     country={this.state.country}
                 />
+            </div>
         </div>
     )
   }

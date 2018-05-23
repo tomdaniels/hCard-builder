@@ -7,13 +7,12 @@
   color: $solid-grey;
   border-bottom: 3px solid $light-grey;
   padding-bottom: 5px;
-  display: initial;
 }
 
 .hCard-builder__form-wrap {
   max-width: 60%;
 }
 
-.hCard-builder__form-with-display-wrap {
+.hCard-builder__form-and-display {
   display: flex;
 }
