@@ -20,7 +20,13 @@ class CardBuilder extends React.Component {
     };
 
     this.onInputChange = this.onInputChange.bind(this);
-  }
+    this.handleAvatarUpload = this.handleAvatarUpload.bind(this);
+  };
+
+    handleAvatarUpload = (event) => {
+        const uploadButton = document.getElementById('upload-avatar');
+        uploadButton.click();
+    };
 
   onInputChange = (event) => {
     const input = event.target.value;
@@ -89,6 +95,7 @@ class CardBuilder extends React.Component {
             <div className="hCard-builder__form-and-display">
                 <CardForm
                     onInputChange={this.onInputChange}
+                    changeAvatar={this.handleAvatarUpload}
                 />
                 <CardPreview
                     givenName={this.state.givenName}

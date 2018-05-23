@@ -4,11 +4,7 @@ import PersonalDetailsForm from './form/personal-details-form';
 import AddressForm from './form/address-form';
 import Button from './form/button';
 
-const CardForm = ({ onInputChange }) => {
-
-    const onAvatarUploadClick = () => {
-      alert('upload avatar');
-    };
+const CardForm = ({ onInputChange, changeAvatar }) => {
 
     const onCreateCardClick = () => {
         alert('create card');
@@ -25,8 +21,8 @@ const CardForm = ({ onInputChange }) => {
             />
             <div className="hCard-builder__button-wrap">
                 <Button
-                    text={"Upload Avatar"}
-                    onButtonClick={onAvatarUploadClick}
+                    text="Upload Avatar"
+                    onButtonClick={changeAvatar}
                 />
                 <Button
                     text={"Create hCard"}
