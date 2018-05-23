@@ -24,5 +24,6 @@ this will point to [localhost:3000](localhost:3000)
 - The aforemention dash of node
 - Sass (scss)
 - Webpack and babel
+- Babel-polyfill is also set up to handle the older browsers. 
 
 ![Screenshot](./docs/screenshot.png)
