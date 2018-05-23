@@ -1,5 +1,6 @@
 import React from 'react';
-import Input from './form/input';
+import CardPreview from './card-preview';
+import CardForm from './card-form';
 
 class CardBuilder extends React.Component {
   constructor(props) {
@@ -15,10 +16,8 @@ class CardBuilder extends React.Component {
       state: '',
       postcode: '',
       country: '',
-      fullAddress: '',
     };
 
-    this.formatAddress = this.formatAddress.bind(this);
     this.onInputChange = this.onInputChange.bind(this);
   }
 
@@ -82,65 +81,25 @@ class CardBuilder extends React.Component {
     }
   };
 
-  formatAddress = () => {
-      this.setState(() => ({
-          fullAddress: `${this.state.houseNameOrNumber} ${this.state.street}, ${this.state.suburb}`,
-      }));
-  };
-
   render() {
     return (
         <div className="hCard-builder__content-container">
             <h1>hCard Builder</h1>
-            <div className="hCard-builder__form-wrap">
-                <h6 className="hCard-builder__section-subheading">PERSONAL DETAILS</h6>
-                <div className="hCard-builder__form-fields">
-                  <Input
-                    label="GIVEN NAME"
+                <CardForm
                     onInputChange={this.onInputChange}
-                  />
-                  <Input
-                    label="SURNAME"
-                    onInputChange={this.onInputChange}
-                  />
-                  <Input
-                    label="EMAIL"
-                    onInputChange={this.onInputChange}
-                  />
-                  <Input
-                    label="PHONE"
-                    onInputChange={this.onInputChange}
-                  />
-                </div>
-                <h6 className="hCard-builder__section-subheading">ADDRESS</h6>
-                <div className="hCard-builder__form-fields">
-                  <Input
-                    label="HOUSE NUMBER"
-                    onInputChange={this.onInputChange}
-                  />
-                  <Input
-                    label="STREET"
-                    onInputChange={this.onInputChange}
-                  />
-                  <Input
-                    label="SUBURB"
-                    onInputChange={this.onInputChange}
-                  />
-                  <Input
-                    label="STATE"
-                    onInputChange={this.onInputChange}
-                  />
-                  <Input
-                    label="POSTCODE"
-                    onInputChange={this.onInputChange}
-                  />
-                  <Input
-                    label="COUNTRY"
-                    onInputChange={this.onInputChange}
-                  />
-                </div>
-            </div>
-      </div>
+                />
+                <CardPreview
+                    name={this.state.givenName}
+                    surname={this.state.surname}
+                    email={this.state.email}
+                    phone={this.state.phone}
+                    houseNumber={this.state.houseNameOrNumber}
+                    street={this.state.street}
+                    suburb={this.state.suburb}
+                    postcode={this.state.postcode}
+                    country={this.state.country}
+                />
+        </div>
     )
   }
 }
