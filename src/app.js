@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Landing from './components/landing.js';
+import CardBuilder from './components/card-builder.js';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-ReactDOM.render(<Landing />, document.getElementById('app'));
+ReactDOM.render(<CardBuilder />, document.getElementById('app'));
