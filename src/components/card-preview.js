@@ -16,7 +16,7 @@ const CardPreview = ({
 }) => (
   <div className="hCard-preview__container">
     <div className="hCard-preview__inner-wrap">
-        <h4 className="hCard-preview__section-title">hCard Preview</h4>
+        <h4 className="hCard-preview__section-title">HCARD PREVIEW</h4>
         <div className="hCard-preview__header">
             <div className="hCard-preview__user-name">
                 {givenName} {surname}
@@ -39,10 +39,11 @@ const CardPreview = ({
             <div className="hCard-preview__field">
                 ADDRESS <span className="hCard-preview__value">{houseNumber} {street} {suburb} {state}</span>
             </div>
-            <div className="hCard-preview__field">
-                POSTCODE <span>{postcode}</span>
-                <span className="hCard-preview__field inline">COUNTRY</span>
-                <span className="hCard-preview__value">{country}</span>
+            <div className="hCard-preview__field inline">
+                POSTCODE <span className="hCard-preview__value">{postcode}</span>
+            </div>
+            <div className="hCard-preview__field inline">
+                Country <span className="hCard-preview__value">{country}</span>
             </div>
         </div>
     </div>

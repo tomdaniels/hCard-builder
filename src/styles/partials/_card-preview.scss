@@ -10,7 +10,7 @@
 }
 
 .hCard-preview__section-title {
-  color: $light-grey;
+  color: $text-grey;
   margin: 0;
   text-align: right;
 }
@@ -48,16 +48,17 @@
 .hCard-preview__field {
   border-bottom: 2px dotted $light-grey;
   color: $off-blue;
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 .hCard-preview__field.inline {
-  border-bottom: none;
-  padding-left: 150px;
+  width: 50%;
+  display: inline-flex;
 }
 
 .hCard-preview__value {
   color: #000;
+  margin-left: 40px;
 }
 
 .hCard-preview__results {
